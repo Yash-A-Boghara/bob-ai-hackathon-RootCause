@@ -1,47 +1,24 @@
-# Source Code
+## Sub-Directory Breakdown
 
-Place all your project's source code in this folder.
+### 1. `src/backend/`
+* Contains the core Express server (`server.js`).
+* Handles Zero-Trust JWT authentication for sensor and SIEM feeds.
+* Manages the SHA-256 immutable cryptographic threat ledger and IBM Bob MCP containment triggers.
 
-## Structure Guidelines
+### 2. `src/frontend/`
+* Contains the user interface assets (`index.html`, styling, and frontend logic).
+* Visualizes active threat feeds, MITRE ATT&CK mappings, and BLUF summary cards.
 
-Organize your code logically. Here are common patterns — use whatever fits
-your project:
+### 3. `src/shared/`
+* Holds shared helper scripts, utilities, and validation schemas used across both client and server boundaries.
 
-### Web Application
-```
-src/
-  backend/        ← API server code
-  frontend/       ← UI code
-  shared/         ← Shared utilities/types
-```
+## Important Files Included
+* `package.json` — Dependency manifest for the Node.js backend.
+* `.env.example` — Template for required environment variables (`PORT`, `JWT_SECRET`).
+* `server.js` — Main execution entry point for the threat intelligence API.
 
-### Data / AI Project
-```
-src/
-  data/           ← Data ingestion / preprocessing
-  models/         ← ML model code
-  api/            ← Serving layer
-  notebooks/      ← Jupyter notebooks (exploration)
-```
-
-### CLI / Script-based Tool
-```
-src/
-  cli/            ← CLI entry points
-  lib/            ← Core logic
-  utils/          ← Helpers
-```
-
-## Important Files to Include
-
-- `requirements.txt` or `package.json` — dependency manifest
-- `.env.example` — template for environment variables (NEVER commit `.env`)
-- Any database migration files
-- Configuration files
-
-## What NOT to Include in src/
-
-- `.env` files with real secrets
-- Large binary files (use Git LFS or link externally)
-- `node_modules/` or `venv/` (these are in `.gitignore`)
-- Build artifacts (`dist/`, `build/`, `__pycache__/`)
+## What NOT to Include in `src/`
+* `.env` files containing live production secrets or private keys.
+* Large binary files or local media assets (use external links or Git LFS).
+* `node_modules/` or local virtual environments (automatically ignored via `.gitignore`).
+* Build artifacts, compilation outputs, or local cache directories (`dist/`, `build/`, `__pycache__/`).
