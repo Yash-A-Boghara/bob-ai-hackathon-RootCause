@@ -9,51 +9,48 @@
 # =============================================================================
 
 team:
-  name: ""                             # REQUIRED — e.g., "Orion Squad"
-  track: ""                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  name: "RootCause"                             # REQUIRED — e.g., "Orion Squad"
+  track: "AI"                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "Krish Gajera"                           # REQUIRED — e.g., "Alice Chen"
+    email: "24dce040@charusat.edu.in"                          # REQUIRED — e.g., "alice.chen@ibm.com"
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
-    - name: ""                         # Add more members by copying the two lines above
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Yash Boghara"                         # REQUIRED — Team member 1
+      email: "24dce021@charusat.edu.in"
+    - name: "Tejas Butani"                         # Add more members by copying the two lines above
+      email: "24dce023@charusat.edu.in"
+    - name: "Aaryan Jarsaniya"
+      email: "24dce047@charusat.edu.in"
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title: "Sentinel D2: Zero-Trust Threat Intelligence"                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
 
   problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-    Replace this text with a concise description of the real-world problem
-    your project addresses and who experiences it.
+    Defence analysts receive thousands of alerts daily from SIEM systems and cyber sensors in different formats. No human team can read them all, and missing a genuine threat is catastrophic. Threat assessments must be produced in structured BLUF format for commanders.
 
   solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-    Replace this text with a clear description of your solution
-    and how it addresses the problem above.
+    Sentinel D2 ingests multi-source threat feeds via a Zero-Trust JWT API. It correlates alerts into an immutable cryptographic ledger to prevent tampering, maps attacker techniques to MITRE ATT&CK, and uses IBM Bob MCP to execute active containment scripts and generate BLUF summaries.
 
   key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+    - "Zero-Trust JWT alert ingestion pipeline"                     
+    - "Cryptographic immutable threat ledger for tamper-proof logging"
+    - "IBM Bob Shell MCP integration for active containment"
+    - "Automated BLUF summary generation for commanders"
+    - "MITRE ATT&CK lateral movement mapping"
+                             
 
   tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
+    languages: ["JavaScript", "HTML", "CSS"]      # REQUIRED 
+    frameworks: ["Node.js", "Express"]            
+    ibm_technologies: ["IBM Bob", "IBM Bob Shell MCP"] 
+    databases: []                                 
+    other: ["JWT (JSON Web Tokens)", "Crypto (SHA-256)"]
 
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    Replace with what aspect of the submission you consider strongest
-    and want judges to pay special attention to.
+what_we_are_most_proud_of: >         
+    We are proud of moving beyond a simple text-generation dashboard. By implementing a Zero-Trust JWT ingestion API and a cryptographic ledger, we built a load-bearing, military-grade architectural prototype rather than just a UI wrapper.
 
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-    Replace with any known limitations, incomplete features,
-    or shortcuts taken due to time constraints.
+  known_limitations: >                 
+    Currently, the system uses an in-memory array for the immutable ledger to allow for rapid prototyping. In a production environment, this will be migrated to a persistent database (e.g., PostgreSQL) to maintain blockchain hash integrity across server reboots.
 
 # =============================================================================
 # ARTIFACT LOCATIONS

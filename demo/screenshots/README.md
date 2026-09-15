@@ -24,3 +24,7 @@ Name your screenshots sequentially so they appear in logical order:
 - Use a consistent browser window size across all screenshots
 - Highlight key UI elements with arrows/circles if helpful (use any image editor)
 - Include a screenshot showing IBM technology integration if applicable
+
+![01-home-dashboard.png](image.png)
+![02-immutable-ledger.png](image.png)
+![03-containment-executed.png](image.png)

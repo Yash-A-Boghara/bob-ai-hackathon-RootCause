@@ -1,6 +1,4 @@
-# 🚀 [Your Project Title Here]
-
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
+# 🚀 Sentinel D2: Zero-Trust Threat Intelligence
 
 ---
 
@@ -8,36 +6,32 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Name** | RootCause |
+| **Track** | AI |
+| **Team Lead** | Krish Gajera — 24dce040@charusat.edu.in |
+| **Members** | Yash Boghara, Tejas Butani, Aaryan Jarsaniya |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+Defence analysts receive thousands of alerts daily from SIEM systems, satellite feeds, and cyber sensors in different formats. Missing a genuine threat is catastrophic, while chasing false positives wastes critical resources. Commanders require structured BLUF (Bottom Line Up Front) formats to get a clear picture in minutes rather than sifting through raw data.
 
 ---
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+Sentinel D2 is a military-grade correlation assistant. It ingests multi-source threat feeds via a Zero-Trust JWT API, correlates alerts using an immutable cryptographic ledger to prevent hacker tampering, maps attacker techniques to the MITRE ATT&CK framework, and leverages IBM Bob to execute active containment.
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **Feature 1:** Zero-Trust JWT alert ingestion pipeline to reject unauthorized sensor data.
+- **Feature 2:** Cryptographic immutable threat ledger using SHA-256 for tamper-proof logging.
+- **Feature 3:** IBM Bob Shell MCP integration for active threat containment.
+- **Feature 4:** Automated BLUF summary generation for commanders.
+- **Feature 5:** MITRE ATT&CK lateral movement mapping (e.g., T1110, T1021).
 
 ---
 
@@ -45,18 +39,18 @@
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| **Languages** | JavaScript, HTML, CSS |
+| **Frameworks** | Node.js, Express |
+| **IBM Technologies** | IBM Bob, IBM Bob Shell MCP |
+| **Databases** | None (In-memory for prototype) |
+| **Other** | JWT (JSON Web Tokens), Crypto (SHA-256 Hash Chaining) |
 
 ---
 
 ## 📁 Repository Structure
 
-```
-├── src/                  # All source code
+```text
+├── src/                  # All source code (Node.js API & HTML Dashboard)
 ├── docs/                 # Written documentation
 │   ├── problem-statement.md
 │   ├── solution-overview.md
@@ -67,55 +61,23 @@
 │   └── demo-video-link.txt  # Link to demo video
 ├── presentation/         # Slide deck
 └── submission.yaml       # Structured submission metadata
-```
 
----
 
-## ⚡ How to Run
+# 1. Clone the repo and navigate to backend
 
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
+git clone [https://github.com/Yash-A-Boghara/bob-ai-hackathon-RootCause.git](https://github.com/Yash-A-Boghara/bob-ai-hackathon-RootCause.git)
+cd bob-ai-hackathon-RootCause/src/backend
 
 # 2. Install dependencies
-[your install command here]
+npm install
 
 # 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
+# Copy .env.example to .env or create one with:
+PORT=5000
+JWT_SECRET=defense_secret_key_2026
 
 # 4. Run the project
-[your run command here]
-```
+node server.js
 
----
-
-## 🖥️ Demo
-
-| Artifact | Link |
-|---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
-
----
-
-## ⚠️ Known Limitations
-
-> Be honest — judges appreciate transparency over overclaiming.
-
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
-
----
-
-## 🏅 What We're Most Proud Of
-
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
-
----
+# 5. Launch the Dashboard
+# Navigate to src/frontend/ and open index.html in your web browser.
